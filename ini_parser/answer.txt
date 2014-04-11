@@ -16,3 +16,11 @@
   const std::string& INIParser::Get(const std::string& key, bool* found)：
     遍历map找出给定的section和key所对应的value值，字符串长度为n时，map的长度小于n，遍历map的时间复杂度为O(n)
     只用了一个section变量来存储默认的section值，所以空间复杂度为O(1)。
+    
+  stringvector Slice(const char* ini_data, size_t ini_data_len, const std::string& line_seperator)：
+    遍历除去[section]的剩余字符串或者本来就不包含[section]的字符串，搜集key=value存入stringvector中，由于是遍历一次，时间复杂度为O(n)
+    使用stringvector存储key=value，所以空间复杂度为O(n)。
+    
+  std::string restrip(std::string s):
+    去掉字符串s的首尾的空格，从前遍历到非空格字符，从后遍历到非空格字符，时间复杂度为O(n)
+    使用了一个space变量来存空格符“ ”，空间复杂度为O(1)。
