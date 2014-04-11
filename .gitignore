@@ -1,10 +1,21 @@
-
-*.d
+# Compiled Object files
+*.slo
+*.lo
 *.o
-*unittest_proxy_url*
-*unittest_string*
-*unittest_vector*
-*.ncb
-*.suo
-*.vcproj.*.user
-Debug
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
