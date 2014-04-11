@@ -1,0 +1,10 @@
+
+*.d
+*.o
+*unittest_proxy_url*
+*unittest_string*
+*unittest_vector*
+*.ncb
+*.suo
+*.vcproj.*.user
+Debug
