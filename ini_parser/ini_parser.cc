@@ -32,7 +32,7 @@ namespace qh
 				data_block += line;
 			}else if(line[0] == '[' && data_block.size() != 0){
 				//std::cout<<data_block<<std::endl;
-				Parse(data_block.c_str(), data_block.size(), "\n", "=");
+				if(!Parse(data_block.c_str(), data_block.size(), "\n", "=")) return false;
 				data_block.clear();
 				data_block+=line;
 			}else if(line[0] != '['){
@@ -41,7 +41,7 @@ namespace qh
 			}
 		}//endwhile
 		//std::cout<<data_block<<std::endl;
-		Parse(data_block.c_str(), data_block.size(), "\n", "=");
+		if(!Parse(data_block.c_str(), data_block.size(), "\n", "=")) return false;
 		infile.close();
 		return true;
 	}
